@@ -1,0 +1,41 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app.View.RecipeDetailsPage"
+             Title="{Binding Name}" 
+             xmlns:vm="clr-namespace:app.ViewModel">
+
+    <ContentPage.BindingContext>
+        <vm:RecipeDetailsPageViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <StackLayout Margin="10">
+            <Label Text="Description:" FontAttributes="Bold" />
+            <Frame Margin="5" Padding="5" BackgroundColor="#EFEFEF">
+                <Label Text="{Binding Description}" Margin="0" />
+            </Frame>
+            <Label Text="Ingredients:" FontAttributes="Bold" />
+            <CollectionView ItemsSource="{Binding Ingredients}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Margin="5" Padding="5" BackgroundColor="#EFEFEF">
+                            <Label Text="{Binding .}" />
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Label Text="Method:" FontAttributes="Bold" />
+            <CollectionView ItemsSource="{Binding Method}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Margin="5" Padding="5" BackgroundColor="#EFEFEF">
+                            <Label Text="{Binding .}" />
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,26 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app.View.ProfilePage"
+             xmlns:vm="clr-namespace:app.ViewModel">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Label Text="User Details" FontSize="Large" HorizontalOptions="Center" Margin="0,20,30,50" />
+
+            <Frame Margin="0,0,0,20" Padding="10" BorderColor="Gray" CornerRadius="5">
+                <StackLayout>
+                    <Label Text="Email:" FontSize="Medium" Margin="0,0,0,5" />
+                    <Label Text="{Binding Email}" FontSize="Medium" />
+                </StackLayout>
+            </Frame>
+
+            <Frame Margin="0,0,0,20" Padding="10" BorderColor="Gray" CornerRadius="5">
+                <StackLayout>
+                    <Label Text="Username:" FontSize="Medium" Margin="0,0,0,5" />
+                    <Label Text="{Binding Username}" FontSize="Medium" />
+                </StackLayout>
+            </Frame>
+
+            <Button Text="Log Out" Command="{Binding LogOutCommand}" Margin="0,40" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

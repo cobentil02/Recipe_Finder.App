@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app.View.RegistrationPage"
+             Title="Sign Up"  
+             Shell.FlyoutBehavior="Disabled">
+
+    <StackLayout Margin="20">
+        <Label Text="Create an account" FontSize="Large" HorizontalOptions="CenterAndExpand" Margin="0,50,0,30"/>
+
+        <Entry Placeholder="Email Address" Keyboard="Email" x:Name="emailEntry" Margin="0,0,0,10" />
+
+        <Entry Placeholder="Username" x:Name="usernameEntry" Margin="0,0,0,10" />
+
+        <Entry Placeholder="Password" IsPassword="{Binding IsPasswordVisible}" x:Name="passwordEntry" Margin="0,0,0,10" />
+
+        <StackLayout Orientation="Horizontal" Margin="0,0,0,20">
+            <Switch IsToggled="{Binding IsPasswordVisible}"/>
+            <Label Text="Show Password" Margin="10,0,0,0" VerticalOptions="Center" TextColor="Grey"/>
+        </StackLayout>
+
+        <Button Text="Create Account" Clicked="OnRegisterClicked" WidthRequest="250" BackgroundColor="#1877f2" TextColor="White"  HeightRequest="50"/>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0">
+            <Label Text="Already have an account? " TextColor="Grey" VerticalOptions="Center" />
+            <Label Text="Log In" TextDecorations="Underline" TextColor="#1877f2" VerticalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnLoginClicked" />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

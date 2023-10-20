@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app.View.FavouritePage"
+              Shell.FlyoutBehavior="Disabled">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Your Favorite Recipes" FontSize="Large" Margin="10"/>
+            <ListView x:Name="favoritesListView" Margin="10" HasUnevenRows="True"
+                      ItemSelected="FavoritesListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10">
+                                <Label Text="{Binding Name}" FontSize="Medium" FontAttributes="Bold"/>
+                                <Label Text="{Binding Description}" FontSize="Small" Margin="0,5,0,0"/>
+                                <StackLayout Orientation="Horizontal" Margin="0,5,0,0">
+                                    <Label Text="Rating: " FontSize="Small"/>
+                                </StackLayout>
+                                <Button Text="Remove from Favorites" Clicked="RemoveFromFavorites_Clicked"
+                                        CommandParameter="{Binding}" Margin="0,10,0,0"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

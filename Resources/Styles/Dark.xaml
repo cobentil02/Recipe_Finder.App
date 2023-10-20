@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app.Resources.Styles.Dark">
+
+    <!-- Colors -->
+    <Color x:Key="PrimaryColor">#FFFFFFFF</Color>
+    <Color x:Key="SecondaryColor">#FF4FC3F7</Color>
+    <Color x:Key="BackgroundColor">#FF121212</Color>
+    <Color x:Key="ForegroundColor">#FFFFFFFF</Color>
+    <Color x:Key="DisabledColor">#FFBDBDBD</Color>
+
+    <!-- Styles -->
+    <Style TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource ForegroundColor}" />
+    </Style>
+    <Style TargetType="Entry">
+        <Setter Property="TextColor" Value="{StaticResource ForegroundColor}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColor}" />
+    </Style>
+    <Style TargetType="Button">
+        <Setter Property="TextColor" Value="{StaticResource ForegroundColor}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}" />
+    </Style>
+    <Style TargetType="ListView">
+        <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColor}" />
+        <Setter Property="SeparatorColor" Value="{StaticResource DisabledColor}" />
+    </Style>
+</ResourceDictionary>

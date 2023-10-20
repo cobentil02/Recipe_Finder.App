@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app.View.AboutPage"
+             Title="About Us" BackgroundColor="White"
+             >
+    <ScrollView>
+        <VerticalStackLayout Padding="20">
+            <Label 
+            Text="Welcome to the Recipe App, your ultimate guide to discovering and sharing delicious recipes with friends and family! Our app offers a vast collection of recipes from around the world, with detailed ingredient lists as well as step-by-step instructions.
+
+Whether you're a seasoned home cook or a beginner looking to improve your culinary skills, the Recipe App has something for everyone. Browse through our categories to find recipes for breakfast, lunch, dinner, desserts, and more, or search for specific recipes by Name.
+
+In addition to finding recipes, the Recipe App also allows you to save your favorite recipes for quick and easy access, and share them with others via email or social media. You can also submit your own recipes to the app and join our community of food lovers who are passionate about cooking and sharing their culinary creations.
+
+We hope you enjoy using the Recipe App as much as we enjoyed creating it. Happy cooking!" FontSize="Large" FontAttributes="Bold" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

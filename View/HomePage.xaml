@@ -1,0 +1,34 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app.View.HomePage"
+             Title="Home" 
+             xmlns:vm="clr-namespace:app.ViewModel"
+             xmlns:views="clr-namespace:app.View">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Profile" Command="{Binding NavigateToProfileCommand}" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.BindingContext>
+        <vm:HomePageViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <Label Text="Recipes" FontSize="Title" HorizontalOptions="Center" />
+        <SearchBar Placeholder="Search recipes" Text="{Binding SearchQuery}" />
+        <ListView ItemsSource="{Binding FilteredRecipes}" Margin="10" SelectionMode="None" SelectedItem="{Binding SelectedRecipe}" ItemTapped="OnRecipeSelectedAsync" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="25">
+                            <Label Text="{Binding Name}" FontAttributes="Bold" />
+                            <StackLayout>
+                                <Button Text="Add to Favorites" Clicked="AddToFavorites_Clicked" CommandParameter="{Binding .}" Margin="0,25,0,0"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
