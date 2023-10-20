@@ -79,5 +79,3 @@ namespace app.Services
 
     }
 }
-//codemillmatt. (2023).Store data locally with SQLite - Training. Microsoft.com.
-//  https://learn.microsoft.com/en-us/training/modules/store-local-data-with-sqlite/3-store-data-locally-with-sqlite‌

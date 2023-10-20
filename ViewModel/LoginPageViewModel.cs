@@ -174,7 +174,3 @@ namespace app.ViewModel
         }
     }
 }
-
-
-//Chand, M. (2020). Compute SHA256 Hash In C#. C-Sharpcorner.com. 
-//https://www.c-sharpcorner.com/article/compute-sha256-hash-in-c-sharp/‌

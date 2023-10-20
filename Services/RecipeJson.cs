@@ -24,5 +24,3 @@ public class RecipeJson : ContentPage
     }
 
 }
-//Deserialize an Object. (2013). Newtonsoft.com.
-//https://www.newtonsoft.com/json/help/html/deserializeobject.htm
