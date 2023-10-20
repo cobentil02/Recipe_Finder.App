@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 
@@ -13,6 +14,5 @@ public class Recipe
     public List<string> Method { get; set; }
     public bool IsFavorite { get; set; }
 
-
+  
 }
-//checking commits

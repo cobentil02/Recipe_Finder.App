@@ -1,4 +1,4 @@
-﻿using Microsoft.Maui.Controls;
+using Microsoft.Maui.Controls;
 using app.Models;
 using app.Services;
 using app.ViewModel;
@@ -11,9 +11,9 @@ using app.View;
 
 
 
-namespace app.ViewModel
-{
-
+    namespace app.ViewModel
+    {
+  
     public class ProfilePageViewModel : BaseViewModel
     {
         public ICommand LogOutCommand { get; set; }
@@ -21,7 +21,7 @@ namespace app.ViewModel
         public string Username { get; set; }
 
         public ProfilePageViewModel()
-        {
+        { 
             Email = App.UserEmail;
             Username = App.Username;
             LogOutCommand = new Command(Logout);
@@ -36,11 +36,11 @@ namespace app.ViewModel
             App.Username = null;
 
             await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
-
-
+       
+        
         }
     }
 
 }
 
-//test
+

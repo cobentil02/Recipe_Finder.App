@@ -69,7 +69,7 @@ public partial class RegistrationPage : ContentPage
 
         // Insert the new user credentials into the database
         await database.SetUserCredentialsAsync(newUserCredentials);
-
+        
         // Store the user's registration details in the App class
         App.UserEmail = newUserCredentials.Email;
         App.Username = newUserCredentials.Username;
@@ -97,5 +97,6 @@ public partial class RegistrationPage : ContentPage
     }
 
 }
+
 
 

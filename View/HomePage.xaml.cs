@@ -4,15 +4,15 @@ using Newtonsoft.Json;
 
 namespace app.View;
 
-public partial class HomePage : ContentPage
-{
+    public partial class HomePage : ContentPage
+    {
 
-
+   
     public HomePage()
     {
         InitializeComponent();
         BindingContext = new HomePageViewModel();
-
+       
     }
 
     private async void OnRecipeSelectedAsync(object sender, ItemTappedEventArgs e)

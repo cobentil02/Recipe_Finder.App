@@ -12,7 +12,7 @@
         <StackLayout Margin="10">
             <Label Text="Description:" FontAttributes="Bold" />
             <Frame Margin="5" Padding="5" BackgroundColor="#EFEFEF">
-                <Label Text="{Binding Description}" Margin="0" />
+            <Label Text="{Binding Description}" Margin="0" />
             </Frame>
             <Label Text="Ingredients:" FontAttributes="Bold" />
             <CollectionView ItemsSource="{Binding Ingredients}">

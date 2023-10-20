@@ -143,15 +143,15 @@ namespace app.ViewModel
 
         private async void GoHome()
         {
-
-            await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
-
+            
+                await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
+            
         }
+    
 
 
 
-
-        private async void GoRegister()
+    private async void GoRegister()
         {
             await Shell.Current.GoToAsync($"{nameof(RegistrationPage)}");
         }
@@ -174,3 +174,7 @@ namespace app.ViewModel
         }
     }
 }
+
+
+//Chand, M. (2020). Compute SHA256 Hash In C#. C-Sharpcorner.com. 
+  //https://www.c-sharpcorner.com/article/compute-sha256-hash-in-c-sharp/‌
